@@ -28,7 +28,7 @@
         <div class="container">
             <div class="file has-name is-fullwidth is-dark">
                 <label class="file-label">
-                    <input class="file-input" type="file" name="uploader" accept="image/*" onchange="processImg()">
+                    <input class="file-input" type="file" name="uploader" accept="image/x-png" onchange="processImg()">
                     <span class="file-cta">
                         <span class="file-icon">
                             <i class="fas fa-upload"></i>
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="container">
-            <img src="" alt="" id="preview" style="image-rendering: crisp-edges; display:block; margin-left:auto; margin-right:auto;">
+            <canvas id="cnvs"></canvas>
 
             <textarea name="" id="output" cols="30" rows="3"></textarea>
         </div>

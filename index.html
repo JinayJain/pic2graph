@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Pic2Graph - Convert images into Desmos graphs</title>
+        <meta
+            name="description"
+            content="Convert your pixel art images into graphs on Desmos"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="app.js"></script>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Pic2Graph</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="app.js"></script>
-</head>
-
-<body>
-    <section class="hero is-dark is-bold">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">Pic2Graph</h1>
+    <body>
+        <div class="content">
+            <div class="header">
+                <h1>Pic2Graph</h1>
+                <p>Convert your pixel art images into graphs on Desmos</p>
             </div>
-            <div class="container">
-                <h1 class="subtitle">
-                    Converts PNG images into Desmos graphs
-                </h1>
+
+            <div class="two-column">
+                <div class="column">
+                    <p id="filename"></p>
+                    <!-- only accepts PNG images -->
+                    <label for="upload" id="upload-button">Upload Image</label>
+                    <input
+                        type="file"
+                        name="upload"
+                        id="upload"
+                        accept="image/png"
+                        onchange="processImg()"
+                        hidden
+                    />
+
+                    <div class="tutorial">
+                        <h2>Tutorial</h2>
+                        <ol>
+                            <li>
+                                Download the PNG version of your desired pixel
+                                art image.
+                            </li>
+                            <li>
+                                Use the <b>Upload Image</b> button to select
+                                your desired image
+                            </li>
+                            <li>
+                                <b>Copy</b> and <b>Paste</b> the equations into
+                                <a href="https://www.desmos.com/calculator"
+                                    >Desmos</a
+                                >
+                                and view your creation!
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Generated Equations</h3>
+                    <textarea id="result"></textarea>
+                    <button onclick="copyToClipboard()">Copy Equations</button>
+                    <p id="copy-status"></p>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="file has-name is-fullwidth is-dark">
-                <label class="file-label">
-                    <input class="file-input" type="file" name="uploader" accept="image/x-png" onchange="processImg()">
-                    <span class="file-cta">
-                        <span class="file-icon">
-                            <i class="fas fa-upload"></i>
-                        </span>
-                        <span class="file-label">
-                            Upload Image
-                        </span>
-                    </span>
-                    <span class="file-name" id="filename">
-                        ...
-                    </span>
-                </label>
-            </div>
-        </div>
-        <div class="container">
-            <textarea id="output"></textarea>
-            <canvas id="cnvs"></canvas>
-        </div>
-    </section>
-
-</body>
-
+        <canvas id="cnvs" hidden></canvas>
+    </body>
 </html>

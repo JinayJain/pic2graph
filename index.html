@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Pic2Graph - Convert images into Desmos graphs</title>
-        <meta
-            name="description"
-            content="Convert your pixel art images into graphs on Desmos"
-        />
-        <link rel="stylesheet" href="styles.css" />
-        <script src="app.js"></script>
-        <script async defer
-          data-website-id="d37e2ac8-b49a-4c00-afb6-df62a2323d5b"
-          src="https://umami.lab.jinay.dev/u.js"></script>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Pic2Graph - Convert images into Desmos graphs</title>
+    <meta
+      name="description"
+      content="Convert your pixel art images into graphs on Desmos"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+    <script
+      async
+      defer
+      data-website-id="d37e2ac8-b49a-4c00-afb6-df62a2323d5b"
+      src="https://umami.lab.jinay.dev/u.js"
+    ></script>
+  </head>
 
-    <body>
-        <div class="content">
-            <div class="header">
-                <h1>Pic2Graph</h1>
-                <p>Convert your pixel art images into graphs on Desmos</p>
-            </div>
+  <body>
+    <div class="content">
+      <div class="header">
+        <h1>Pic2Graph</h1>
+        <p>Convert your pixel art images into graphs on Desmos</p>
+      </div>
 
-            <div class="two-column">
-                <div class="column">
-                    <p id="filename"></p>
-                    <!-- only accepts PNG images -->
-                    <label for="upload" id="upload-button">Upload Image</label>
-                    <input
-                        type="file"
-                        name="upload"
-                        id="upload"
-                        accept="image/png"
-                        onchange="processImg()"
-                        hidden
-                    />
+      <div class="two-column">
+        <div class="column">
+          <p id="filename"></p>
+          <!-- only accepts PNG images -->
+          <label for="upload" id="upload-button">Upload Image</label>
+          <input
+            type="file"
+            name="upload"
+            id="upload"
+            accept="image/png"
+            onchange="processImg()"
+            hidden
+          />
 
-                    <div class="tutorial">
-                        <h2>Tutorial</h2>
-                        <ol>
-                            <li>
-                                Download the PNG version of your desired pixel
-                                art image.
-                            </li>
-                            <li>
-                                Use the <b>Upload Image</b> button to select
-                                your desired image
-                            </li>
-                            <li>
-                                <b>Copy</b> and <b>Paste</b> the equations into
-                                <a
-                                    href="https://www.desmos.com/calculator"
-                                    target="_blank"
-                                    >Desmos</a
-                                >
-                                and view your creation!
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <h3>Generated Equations</h3>
-                    <textarea id="result"></textarea>
-                    <button onclick="copyToClipboard()">Copy Equations</button>
-                    <p id="copy-status"></p>
-                </div>
-            </div>
+          <div class="tutorial">
+            <h2>Tutorial</h2>
+            <ol>
+              <li>Download the PNG version of your desired pixel art image.</li>
+              <li>
+                Use the <b>Upload Image</b> button to select your desired image
+              </li>
+              <li>
+                <b>Copy</b> and <b>Paste</b> the equations into
+                <a href="https://www.desmos.com/calculator" target="_blank"
+                  >Desmos</a
+                >
+                and view your creation!
+              </li>
+            </ol>
+          </div>
         </div>
-        <canvas id="cnvs" hidden></canvas>
-    </body>
+
+        <div class="column">
+          <h3>Generated Equations</h3>
+          <textarea id="result"></textarea>
+          <button onclick="copyToClipboard()">Copy Equations</button>
+          <p id="copy-status"></p>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align: center">
+      Created with ❤️ by <a href="https://jinay.dev">Jinay Jain</a>
+    </p>
+    <canvas id="cnvs" hidden></canvas>
+  </body>
 </html>

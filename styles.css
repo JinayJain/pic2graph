@@ -1,35 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap");
 
 :root {
-    /* Color Palette */
-    --color-primary: #59594a;
-    --color-secondary: #5b5f97;
-    --color-accent: #ffc145;
-    --color-white: #fffffb;
+  /* Color Palette */
+  --color-primary: #b3b37a;
+  --color-chalkboard: #59594a;
+  --color-secondary: #5b5f97;
+  --color-accent: #ffc145;
+  --color-white: #fffffb;
 }
 
 body {
-    font-family: "Space Grotesk", sans-serif;
-    min-height: 100vh;
-    margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  min-height: 100vh;
+  margin: 0;
 
-    background: var(--color-secondary);
-    color: var(--color-white);
+  background: var(--color-secondary);
+  color: var(--color-white);
 }
 
 button,
 #upload-button {
-    font-family: "Space Grotesk", sans-serif;
-    background-color: var(--color-accent);
-    color: black;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
-    font-size: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--color-accent);
+  color: black;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+button:hover,
+#upload-button:hover {
+  background-color: var(--color-primary);
+  cursor: pointer;
 }
 
 input[type="file"] {
-    display: none;
+  display: none;
 }
 
 h1,
@@ -38,75 +45,75 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 700;
-    margin-top: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  margin-top: 0;
 }
 
 a {
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 a:hover {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    border-radius: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-radius: 16px;
 }
 
 .header {
-    margin-top: 80px;
-    color: var(--color-white);
+  margin-top: 80px;
+  color: var(--color-white);
 }
 
 .header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 .header p {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
 }
 
 .two-column {
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
 }
 
 .column {
-    flex: 1;
+  flex: 1;
 }
 
 .tutorial {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 #result {
-    width: 100%;
-    min-height: 300px;
-    resize: vertical;
-    font-family: "Space Grotesk", sans-serif;
+  width: 100%;
+  min-height: 300px;
+  resize: vertical;
+  font-family: "Space Grotesk", sans-serif;
 
-    padding: 20px;
-    border: none;
+  padding: 20px;
+  border: none;
 
-    background-color: var(--color-primary);
-    color: var(--color-accent);
-    box-shadow: #4e4e49 4px 4px 6px;
-    border-radius: 12px;
+  background-color: var(--color-chalkboard);
+  color: var(--color-accent);
+  box-shadow: #4e4e49 4px 4px 6px;
+  border-radius: 12px;
 
-    margin-bottom: 30px;
-    line-height: 1.75em;
+  margin-bottom: 30px;
+  line-height: 1.75em;
 }
 
 #filename {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
